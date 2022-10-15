@@ -1,0 +1,22 @@
+.Weather .search-button {
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: #a08b9663;
+  border: none;
+  color: #fff;
+  
+  
+}
+.Weather .search-button:hover {
+  opacity: 0.8;
+}
+.Weather .geolocation-button {
+  background: #eb6e4bbf;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 50%;
+  color: #fff;
+}
+.Weather .geolocation-button:hover {
+  opacity: 0.8;
+}

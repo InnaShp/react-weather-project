@@ -8,12 +8,13 @@ export default function App() {
       <div className="card">
         <Weather defaultCity="Kyiv" />
       </div>
-      <footer>
+      <footer className="mt-3">
           This project was coded by Inna Shpachynska and is{" "}
           <a
             href="https://github.com/InnaShp/react-weather-project" 
             target="_blank"
             rel="noopener noreferrer"
+            className="link"
           >
             open-sourced on GitHub
           </a>{" "}
@@ -22,6 +23,7 @@ export default function App() {
             href="https://legendary-stroopwafel-58bdfa.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
+            className="link"
           >
             hosted on Netlify
           </a>

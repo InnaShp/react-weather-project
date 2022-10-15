@@ -1,0 +1,18 @@
+.WeatherTemperature h2 {
+  font-size: 86px;
+  text-align: right;
+  margin-top: 30px;
+}
+.WeatherTemperature .unit {
+  font-size: 35px;
+  position: relative;
+  bottom: 40px;
+  font-style: italic;
+}
+.WeatherTemperature .unit a {
+  text-decoration: none;
+  color: #eb6e4bbf; 
+}
+.WeatherTemperature .unit a:hover {
+  text-decoration: underline;
+}
