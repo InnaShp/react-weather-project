@@ -3,11 +3,18 @@ import "./WeatherForecastDay.css";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherForecastDay(props) {
+  function day() {
+    let date = new Date(props.data.dt * 1000);
+    let day = date.getDay();
 
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    return days[day];
+  }
   return (
     <div className="WeatherForecastDay">
       <div className="forecast-day">
-        Monday
+        {day()}
       </div>
       <WeatherIcon code={props.data.weather[0].icon} />
       <div className="forecast-temperature">
