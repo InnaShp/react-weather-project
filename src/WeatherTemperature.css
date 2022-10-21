@@ -9,10 +9,3 @@
   bottom: 40px;
   font-style: italic;
 }
-.WeatherTemperature .unit a {
-  text-decoration: none;
-  color: #eb6e4bbf; 
-}
-.WeatherTemperature .unit a:hover {
-  text-decoration: underline;
-}

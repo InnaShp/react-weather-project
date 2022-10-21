@@ -13,10 +13,10 @@ export default function WeatherForecastDay(props) {
   }
   return (
     <div className="WeatherForecastDay">
-      <div className="forecast-day">
+      <div className="forecast-day mb-2">
         {day()}
       </div>
-      <WeatherIcon code={props.data.weather[0].icon} />
+      <WeatherIcon code={props.data.weather[0].icon} size={36} />
       <div className="forecast-temperature">
         <span className="forecast-temperature-max fw-bold">{Math.round(props.data.temp.max)}</span>°
         {" "}

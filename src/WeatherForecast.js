@@ -1,18 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./WeatherForecast.css";
 import axios from "axios";
 import WeatherForecastDay from "./WeatherForecastDay";
 
 export default function WeatherForecast(props) {
   const [forecast, setForecast] = useState("");
-  const [loaded, setLoaded] = useState("");
+  const [loaded, setLoaded] = useState(false);
   
   function handleResponse(response) {
     setForecast(response.data.daily);
     setLoaded(true);
   }
 
-  
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.data]);
   
 
   if (loaded) {
@@ -34,7 +36,7 @@ export default function WeatherForecast(props) {
       </div>
     );
   } else {
-    let apiKey = "9ad78e7db9272efcf0a75aa55efdcd5a";
+    let apiKey = "c03face7caa58a9b7ffa9f52b7238a93";
     let units = "metric";
     let longitude = props.data.lon;
     let latitude = props.data.lat;
