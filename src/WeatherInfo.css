@@ -1,6 +1,7 @@
 .WeatherInfo h1 {
   font-size: 48px;
   margin-top: 30px;
+  color: #39463e;
 }
 
 .WeatherInfo ul {
