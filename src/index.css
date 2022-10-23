@@ -1,7 +1,7 @@
 body {
   background-image: url("./image.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 250%;
 }
 .container {
   margin-top: 100px;

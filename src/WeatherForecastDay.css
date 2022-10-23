@@ -1,4 +1,8 @@
+.WeatherForecastDay {
+  font-family: 'Roboto', sans-serif;
+}
 .WeatherForecastDay .forecast-day {
   font-weight: bold;
   color: #393e46;
+  font-size: 18px;
 }
