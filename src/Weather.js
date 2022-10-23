@@ -8,6 +8,32 @@ import WeatherForecast from "./WeatherForecast";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [date, setDate ] = useState("");
+  
+  function formatDate(timestamp) {
+    let date = new Date(timestamp);
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ];
+    let day = days[date.getDay()];
+    
+    if (hours < 10) {
+      hours = `0${hours}`;
+    }
+    
+    if (minutes < 10) {
+      minutes = `0${minutes}`;
+    }
+    setDate(`${day} ${hours}:${minutes}`);
+  }
 
   function handleResponse(response) {
     setWeatherData({
@@ -20,6 +46,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       name: response.data.name
     });
+    formatDate(response.data.dt * 1000);
   }
 
   function handleSubmit(event) {
@@ -62,7 +89,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <WeatherInfo data={weatherData} />
+        <WeatherInfo data={weatherData} date={date} />
         <WeatherForecast data={weatherData.coordinates} />
       </div>
     );
