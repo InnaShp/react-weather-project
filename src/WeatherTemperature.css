@@ -2,10 +2,11 @@
   font-size: 86px;
   text-align: right;
   margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
 }
 .WeatherTemperature .unit {
   font-size: 35px;
   position: relative;
-  bottom: 40px;
   font-style: italic;
 }
